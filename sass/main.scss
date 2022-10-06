@@ -9,6 +9,8 @@
 .main-header{
     padding: 32px;
     position: sticky;
+    background-color: v.$light-1;
+    z-index: 100;
     top: 0;
     width: 100%;
     .main-header-container{
@@ -101,7 +103,6 @@
         row-gap: 27.5px;
         background-color: white;
         &__item1{
-            overflow: hidden;
             align-self: center;
             width: 100%;
         }
@@ -111,9 +112,80 @@
 
     }
 }
+// Auction Section
+.auction{
+    margin-left: 32px;
+    margin-bottom: 92px;
+    &-container{
+        min-width: 1280px;
+        max-width: 1280px;
+    }
+    &-header{
+        width: 364px;
+        margin-bottom: 40px;
+        a{
+            text-decoration: underline;
+            text-decoration-color: v.$secondary-color;
+            text-underline-offset: 5px;
+        }
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        color: v.$secondary-color
+    }
+    &-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);    
+        gap: 40px;
+    }
+    &-card{
+        &-grid{
+            background-color: v.$light-2;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            padding: 24px 23px 24px 24px;
+            max-width: 290px;
+            margin-right: 0;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            column-gap: 24px;
+            row-gap: 12px;
+            &:nth-child(odd){
+                justify-self: start;
+            }
+            &:nth-child(even){
+                justify-self: end;
+            }
+        }
 
-
-
+        &__series{
+            color: v.$orange;
+        }
+        &__topbid{
+            color: v.$dark-1;
+        }
+        &__title{
+            font-size: 20px;
+            line-height: 100%;
+            font-weight: 500;
+        }
+        &__price{
+            font-size: 20px;
+            line-height: 100%;
+            font-weight: 500;
+        }
+        &__desc{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+        }
+    }
+}
 
 
 
