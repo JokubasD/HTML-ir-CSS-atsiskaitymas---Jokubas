@@ -68,7 +68,26 @@
         height: 374px
     }
 }
-
+// Early Birds section
+.early-birds{
+    .container{
+        width: 428px;
+        height: 326px;
+    }
+    .banner{
+        background: linear-gradient(135deg, #f7a7cd,#f58b8b, #f37878,#f59772, #ff9239, #dfd687);
+        padding: 122px 32px 32px 32px;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        color: v.$primary-color
+    }
+}
 
 
 
