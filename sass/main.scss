@@ -229,9 +229,70 @@
         margin-bottom: 66px;
     }
 }
+//Footer Section
+.footer-text{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: v.$secondary-color;
+}
+.main-footer{
+    padding: 64px 0px 105px 32px;
+    .flexitem1{
+        margin-bottom: 64px;
+        &-subtitle{
+            @extend .footer-text;
+            margin-top: 30px;
+            margin-bottom: 32px;
+        }
+        .icon-flex{
+            gap: 16px;
+            height: 18px;
+        }
+        .social-icon{
+            color: v.$dark-2;
+        }
+        
+    }
+    .flexitem2{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.about-nft-grid, .contact-social-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    column-gap: 25px;
+    row-gap: 16px;
+    .nft__link{
+        @extend .footer-text;
+    }
+    .nft__title{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        color: v.$secondary-color;
+    }
+}
 
 
-// font-family: 'Varela Round', sans-serif; for header title
+.footers-bottom{
+    margin-top: 64px;
+    .launch-date{
+        display: none;
+    }
+    .copyright{
+        @extend .footer-text;
+        line-height: 100%;
+        color: v.$dark-2
+    }
+}
 
 
 @import 'media';
