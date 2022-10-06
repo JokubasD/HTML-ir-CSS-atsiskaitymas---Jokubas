@@ -88,7 +88,29 @@
         color: v.$primary-color
     }
 }
+// Company Section
+.company{
+    padding: 64px 32px 56px;
+    .container{
+        max-width: 100%;
+    }
+    &-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        row-gap: 27.5px;
+        background-color: white;
+        &__item1{
+            overflow: hidden;
+            align-self: center;
+            width: 100%;
+        }
+        &__item4{
+            display: none
+        }
 
+    }
+}
 
 
 
