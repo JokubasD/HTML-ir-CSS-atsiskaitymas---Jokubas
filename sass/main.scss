@@ -5,9 +5,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 
 
-
+// Header
 .main-header{
     padding: 32px;
+    position: sticky;
+    top: 0;
+    width: 100%;
     .main-header-container{
         display: flex;
         justify-content: space-between;
@@ -21,12 +24,50 @@
         display: none;
     }
     .burger{
-        font-size: 24px;
+        font-size: 30px;
         color: v.$dark-2;
         line-height: 1;
     }
 }
-
+// Hero Section
+.hero{
+    padding: 10px 0px 80px 32px;
+}
+.hero-container{
+    display: flex;
+    min-width: 482px;
+    .box1{
+        position: relative;
+        width: 62%;
+        margin-top: 38px;
+    }
+    &__subtitle{
+        color: v.$pink;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+    &__title{
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 24px;
+    }
+    &__desc{
+        margin-bottom: 32px;
+    }
+    .box2{
+        position: absolute;
+        top: 10%;
+        right: -48.5%;
+        width: 100%;
+        overflow: hidden;
+        height: 374px
+    }
+}
 
 
 
