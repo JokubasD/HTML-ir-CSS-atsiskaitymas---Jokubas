@@ -32,6 +32,34 @@
     }
 }
 // Hero Section
+//General commands for other section too::after
+.box-rel{
+    position: relative;
+    width: 62%;
+    margin-top: 38px;
+}
+.pink-sub{
+    color: v.$pink;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.section-title{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 24px;
+}
+.box-abs{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    
+}
+//other commands
 .hero{
     padding: 10px 0px 80px 32px;
 }
@@ -39,34 +67,21 @@
     display: flex;
     min-width: 482px;
     .box1{
-        position: relative;
-        width: 62%;
-        margin-top: 38px;
+        @extend .box-rel;
     }
     &__subtitle{
-        color: v.$pink;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        margin-bottom: 24px;
+        @extend .pink-sub;
     }
     &__title{
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 58px;
-        margin-bottom: 24px;
+        @extend .section-title
     }
     &__desc{
         margin-bottom: 32px;
     }
     .box2{
-        position: absolute;
+        @extend .box-abs;
         top: 10%;
         right: -48.5%;
-        width: 100%;
-        overflow: hidden;
         height: 374px
     }
 }
@@ -186,7 +201,34 @@
         }
     }
 }
-
+// Launching Section
+.launching{
+    .container{
+        padding: 64px 0px 0px 32px;
+        border-top: 2px solid v.$light-2;
+        border-bottom: 2px solid v.$light-2;
+        width: 108%
+    }
+    .launching-box1{
+        @extend .box-rel;
+        margin-top: 0;
+    }
+    .launching-box2{
+        align-self: flex-end;
+    }
+    &__subtitle{
+        @extend .pink-sub;
+    }
+    &__title{
+        @extend .section-title;
+    }
+    &__desc{
+        margin-bottom: 32px;
+    }
+    button{
+        margin-bottom: 66px;
+    }
+}
 
 
 // font-family: 'Varela Round', sans-serif; for header title
