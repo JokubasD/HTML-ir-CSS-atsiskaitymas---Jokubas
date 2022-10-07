@@ -13,7 +13,7 @@
     z-index: 100;
     top: 0;
     width: 100%;
-    .main-header-container{
+    .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,8 +22,29 @@
 }
 
 .main-menu {
-    ul{
+    ul{ 
+        a{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            color: v.$secondary-color;
+            &.pink{
+                color: v.$pink;
+                transition: all 0.3s;
+                &:hover{
+                    color: v.$primary-color;
+                }
+            }
+            &.black{
+                transition: all 0.3s;
+                &:hover{
+                    color: v.$pink;
+                }
+            }
+            
+        }
         display: none;
+        
     }
     .burger{
         font-size: 30px;
@@ -32,7 +53,7 @@
     }
 }
 // Hero Section
-//General commands for other section too::after
+//General commands for other section too:
 .box-rel{
     position: relative;
     width: 62%;
@@ -56,7 +77,6 @@
 .box-abs{
     position: absolute;
     width: 100%;
-    overflow: hidden;
     
 }
 //other commands
@@ -64,7 +84,6 @@
     padding: 10px 0px 80px 32px;
 }
 .hero-container{
-    display: flex;
     min-width: 482px;
     .box1{
         @extend .box-rel;
@@ -82,13 +101,13 @@
         @extend .box-abs;
         top: 10%;
         right: -48.5%;
-        height: 374px
+        height: 390px
     }
 }
 // Early Birds section
 .early-birds{
     .container{
-        width: 428px;
+        width: 100%;
         height: 326px;
     }
     .banner{
@@ -117,10 +136,6 @@
         column-gap: 50px;
         row-gap: 27.5px;
         background-color: white;
-        &__item1{
-            align-self: center;
-            width: 100%;
-        }
         &__item4{
             display: none
         }
@@ -150,9 +165,7 @@
         line-height: 48px;
         margin-bottom: 16px;
     }
-    &__subtitle{
-        color: v.$secondary-color
-    }
+    
     &-grid{
         display: grid;
         grid-template-columns: repeat(4, 1fr);    
@@ -170,12 +183,6 @@
             grid-template-columns: repeat(2,1fr);
             column-gap: 24px;
             row-gap: 12px;
-            &:nth-child(odd){
-                justify-self: start;
-            }
-            &:nth-child(even){
-                justify-self: end;
-            }
         }
 
         &__series{

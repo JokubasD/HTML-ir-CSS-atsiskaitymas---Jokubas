@@ -50,6 +50,7 @@ p{
     z-index: -1;
 }
 
+//Helpers
 .small-text{
     font-weight: 500;
     font-size: 12px;
@@ -72,4 +73,7 @@ p{
 }
 .gap-8{
     gap: 8px;
+}
+.d-none{
+    display: none;
 }
