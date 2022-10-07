@@ -1,4 +1,75 @@
+// Extra media for more responsiveness
+// Skip to bottom for 1440px resolution
+@media screen and (min-width:700px){
+    //hero
+    .hero{
+        &-container{
+            max-width: 550px;
+            .br1{
+                display: none;
+            }
+            .box2{
+                top: 8%;
+                right: -119px;
+                height: 502px;
+                width: auto;
+            }
 
+        }
+    }
+}
+@media screen and (min-width:850px){
+    //hero
+    .hero{
+        &-container{
+            max-width: 700px;
+            .box2{
+                right: -98px;
+                height: 553px;
+                width: auto;
+            }
+
+        }
+    }
+}
+@media screen and (min-width:850px){
+    //general
+    .container{
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    //header
+    .main-header{
+        padding: 40px 60px;
+        .main-menu{
+            ul{
+                display: flex;
+                gap: 24px;
+            }
+            .burger{
+                display: none;
+            }
+        }
+    }
+    //hero
+    .hero{
+        &-container{
+            max-width: 1000px;
+            .box2{
+                right: -50px;
+                top: 5%;
+                height: 600px;
+                width: auto;
+            }
+        }
+    }
+    //Auction
+    .auction-header{
+        width: 520px;
+    }
+}
+//Required media resolution: 
 @media  screen and (min-width: 1440px) {
     // General adjustments
     .container{
@@ -29,9 +100,6 @@
                 line-height: 116px;
                 margin-bottom: 32px;
             }
-            &__subtitle{
-                margin-bottom: 41px;
-            }
             .box1{
                 margin-top: 18px;
                 max-width: 620px;
@@ -43,10 +111,10 @@
                 }
             }
             .box2{
-                top: 26%;
-                right: 109px;
+                top: 21%;
+                right: 41px;
                 height: 800px;
-                width: 741px;
+                width: 779px;
             }
 
         }
@@ -117,6 +185,12 @@
                 display: block;
             }
             .br2{
+                display: none;
+            }
+            .extra-detail{
+                display: inline-block;
+            }
+            .dot{
                 display: none;
             }
         }
