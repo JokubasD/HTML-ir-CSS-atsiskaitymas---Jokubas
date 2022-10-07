@@ -1,0 +1,79 @@
+@use 'vars' as v;
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    background-color: v.$light-1;
+}
+li{
+    list-style-type: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    color: v.$primary-color;
+    margin: 0;
+}
+p{
+    margin-bottom: 0;
+    color: v.$secondary-color;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+
+// Main button
+.btn{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    padding: 22px 56px 23px;
+    background: linear-gradient(70deg, #e24a93,#FF3939, #ff9239, #dfd687);
+    border-radius: 100px;
+    position: relative;
+    z-index: -5;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    background-color: white;
+    z-index: -1;
+}
+
+//Helpers
+.small-text{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+.self-end{
+    justify-self: end;
+}
+.gap-8{
+    gap: 8px;
+}
+.d-none{
+    display: none;
+}
